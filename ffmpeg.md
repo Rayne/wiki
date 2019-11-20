@@ -15,7 +15,7 @@ file 'A.webm'
 file 'B.webm'
 ```
 
-## Einfaches Skalierung
+## Einfache Skalierung
 
 Mit Beibehaltung des Seitenverhältnisses:
 
