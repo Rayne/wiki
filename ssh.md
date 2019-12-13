@@ -3,7 +3,13 @@
 ## Port-Forwarding
 
 ```bash
+# Access a MySQL service running on ds3
+# that is only listening to localhost (of ds3)
+# by accessing localhost:3306 on the client
 ssh -L 3306:localhost:3306 ds3
+
+# Tunnel localhost → ds7 → ds9:22 when accessing localhost:2222
+ssh -L 2222:ds9:22 ds7
 ```
 
 ## SOCKS-Proxy
