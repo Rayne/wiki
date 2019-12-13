@@ -29,7 +29,7 @@ export GIT_AUTHOR_DATE="$date"
 
 ## Pulled from Wrong Repository
 
-```
+```bash
 git tag -l | xargs git tag -d # Delete all tags
 git fetch --tags
 git gc
