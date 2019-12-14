@@ -1,0 +1,8 @@
+# Unicode
+
+## Checkboxes and Symbols
+
+- ☐ ☑ ☒
+- ❎
+- ✓ ✓ ✅ ✅
+- ✘ ❌ ✖ ✕ ☓ ✗
