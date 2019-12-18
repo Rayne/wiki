@@ -1,5 +1,31 @@
 # ffmpeg
 
+## Kodierung
+
+## GIF
+
+Siehe [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/q/556029/99746).
+
+```bash
+ffmpeg -i "$INPUT" -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$INPUT.ffmpeg.gif"
+ffmpeg -i "$INPUT" -vf "fps=10,scale=320:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 10 - -loop 0 -layers optimize "$INPUT.convert.gif"
+```
+
+## Microsoft Powerpoint 2010
+
+```bash
+ffmpeg -i input.flv \
+	-c:v wmv2 -q:v 4  \
+	-c:a wmav2 -b:a 128k \
+	output.wmv # avi
+```
+
+### x265
+
+```bash
+ffmpeg -i "$file" -c:v libx265 -crf 28 "$file.x265.crf-28.mp4"
+```
+
 ## Einfache Konkatinierung
 
 Siehe [Concatenate](https://trac.ffmpeg.org/wiki/Concatenate).
@@ -29,34 +55,16 @@ ffmpeg -i input.jpg -vf scale=320:-1 output_320.png
 ffmpeg -vfilters rotate=90 -i input.mp4 output.mp4
 ```
 
-## GIF
-
-Siehe [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/q/556029/99746).
-
-```bash
-ffmpeg -i "$INPUT" -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$INPUT.ffmpeg.gif"
-ffmpeg -i "$INPUT" -vf "fps=10,scale=320:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 10 - -loop 0 -layers optimize "$INPUT.convert.gif"
-```
-
 ## Meta-Daten
 
 ```bash
 ffprobe -v quiet "$file" -print_format json -show_entries stream=index,codec_type:stream_tags=creation_time:format_tags=creation_time | grep creation_time
 ```
 
-## Microsoft Powerpoint 2010
-
-```bash
-ffmpeg -i input.flv \
-	-c:v wmv2 -q:v 4  \
-	-c:a wmav2 -b:a 128k \
-	output.wmv # avi
-```
-
 ## Schnipsel
 
 ```bash
-ffmpeg -i qualle.webm -ss AnfangInSekunden -t LängeInSekunden -c:v copy -c:a copy output.webm
+ffmpeg -i in.webm -ss AnfangInSekunden -t LängeInSekunden -c:v copy -c:a copy out.webm
 ```
 
 **WEBM**
