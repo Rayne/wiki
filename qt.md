@@ -63,9 +63,15 @@ connect(this->lspServer, static_cast<void(QProcess::*)(int, QProcess::ExitStatus
 
 2. Build all
 
+### Ubuntu 18.04
+
+```bash
+apt install qtcreator qtcreator-doc qt5-default qt5-doc
+```
+
 ### Documentation
 
-```
+```bash
 apt install qtcreator-doc qt5-doc
 ```
 
