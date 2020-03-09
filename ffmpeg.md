@@ -2,7 +2,7 @@
 
 ```bash
 ffmpeg -i "$file" -ss 40 -t 30 -vf "scale=640:-1" -c:v libx265 -crf 23 "$file.x265.crf-28.640.mp4"
-```bash
+```
 
 ## Kodierung
 
