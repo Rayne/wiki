@@ -25,7 +25,7 @@ borg extract --dry-run --list --strip-components 3 ::india.server.datenschuppen.
 
 Service downtimes can be reduced with partial or non-consistent backups.
 Afterward, a consistent backup is created with few new chunks.
-The following examples shows the pruning strategy for partial and consistent backups.
+The following example shows the pruning strategy for partial and consistent backups.
 
 ```bash
 echo " :: PRUNE"
@@ -74,7 +74,7 @@ borg umount MOUNTPOINT
 >
 >	Create a wrapper script: /usr/local/bin/pv-wrapper
 >
->	```
+>	```bash
 >	#!/bin/sh
 >	# -q, --quiet              do not output any transfer information at all
 >	# -L, --rate-limit RATE    limit transfer to RATE bytes per second
