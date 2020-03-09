@@ -1,5 +1,16 @@
 # SSH
 
+## Client Configuration
+
+```
+Host a
+HostName a.example.com
+User user
+Port 123
+IdentityFile ~/.ssh/keys/a.key
+ServerAliveInterval 10
+```
+
 ## Port-Forwarding
 
 ```bash
