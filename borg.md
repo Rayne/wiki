@@ -21,6 +21,32 @@ borg create --stats --progress --compression zlib,9 --list --filter=AME "::{host
 borg extract --dry-run --list --strip-components 3 ::india.server.datenschuppen.de-2019-11-13T11:16:49 root/docker.io/kanboard
 ```
 
+## Prune
+
+Service downtimes can be reduced with partial or non-consistent backups.
+Afterward, a consistent backup is created with few new chunks.
+The following examples shows the pruning strategy for partial and consistent backups.
+
+```bash
+echo " :: PRUNE"
+borg prune \
+        --list \
+        --show-rc \
+        --stats \
+        --prefix '{hostname}-' \
+        --keep-within 7d \
+        --keep-weekly 4 \
+        --keep-monthly 3 \
+
+echo " :: PRUNE ALL PARTIALS"
+borg prune \
+        --list \
+        --show-rc \
+        --stats \
+        --glob-archives '*-partial' \
+        --keep-last 1
+```
+
 ## Reverse Tunnel
 
 ```bash
