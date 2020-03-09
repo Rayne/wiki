@@ -11,3 +11,9 @@ convert "$file" -resize "${size}x${size}>" -quality "$quality" -sampling-factor 
 ```bash
 convert "$file" -fuzz 25% -fill white -opaque \#f6fbff "${file:0:-4}.out.png"
 ```
+
+## Split landscape image
+
+```bash
+convert "$file" -rotate 90 -crop 2x1@  +repage "$file"
+```
