@@ -24,6 +24,22 @@ ffmpeg -i input.flv \
 	output.wmv # avi
 ```
 
+### x264
+
+```bash
+ffmpeg -i "$file" -c:v libx264 -crf 23 "$file.x264.crf-23.mp4"
+```
+
+Siehe [Encode/H.264](https://trac.ffmpeg.org/wiki/Encode/H.264)
+bzw. [Encode/H.264#crf](https://trac.ffmpeg.org/wiki/Encode/H.264#crf).
+
+Der `-tune`-Parameter kann für weitere Optimierungen verwendet werden,
+z.B. für Standbilder ("Slide shows").
+
+```
+ffmpeg -i "$file" -c:v libx264 -preset slow -tune stillimage -crf 23 -c:a copy "$file.mkv"
+```
+
 ### x265
 
 ```bash
