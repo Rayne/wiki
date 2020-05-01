@@ -30,7 +30,7 @@ bzw. "Anwendungen & Aktualisierungen"-Anwendung bei Ubuntu-Derivaten möglich.
 	vboxmanage modifyhd --compact Finroc/Finroc.vdi
 	```
 
-	The `modifyhd` command support file names and UUIDs.
+	The `modifyhd` command supports file names and UUIDs.
 
 	```bash
 	vboxmanage modifyhd --compact XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
