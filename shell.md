@@ -27,3 +27,11 @@ exec 2>&1
 ```bash
 nice -n 19 ionice -c3 rm -rf /dir
 ```
+
+## Timestamps
+
+```bash
+date '+%Y-%m-%d'
+date '+%Y-%m-%d %H:%M:%S'
+date '+%Y-%m-%d_%H-%M-%S'
+```
