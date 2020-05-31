@@ -1,6 +1,24 @@
 # JavaScript
- 
-## Timestamp
+
+## Articles
+
+- [How to Make Uploading 10x Faster](https://blog.daftcode.pl/how-to-make-uploading-10x-faster-f5b3f9cfcd52)
+
+## Documentation
+
+- [Einführung in JavaScript](https://molily.de/js)
+- [The Modern JavaScript Tutorial](https://javascript.info)
+  - [Coordinates](https://javascript.info/coordinates)
+
+## Libraries
+
+- [Day.js](https://day.js.org) uses the API of [Moment.js](https://momentjs.com/)
+- [pako](https://github.com/nodeca/pako) (compression, zlib)
+- [Vanilla JS](http://vanilla-js.com)
+
+## Snippets
+
+### Date & Time
 
 ```js
 let today = new Date();
