@@ -5,7 +5,18 @@ set -eux
 shopt -s nullglob
 ```
 
-## Parallelization
+## Documentation
+
+- [BASH Frequently Asked Questions](http://mywiki.wooledge.org/BashFAQ)
+- [Bash Hackers Wiki](https://wiki.bash-hackers.org)
+
+## Articles
+
+- [Introduction to Flock](https://linuxaria.com/howto/linux-shell-introduction-to-flock)
+
+## Snippets
+
+### Parallelization
 
 ```bash
 apt install parallel
@@ -15,20 +26,20 @@ apt install parallel
 find -iname '*png' -print0 | parallel -0 -j 8 optipng {}
 ```
 
-## Log Input and Output
+### Log Input and Output
 
 ```bash
 exec > >(tee -i log)
 exec 2>&1
 ```
 
-## Process Priorities
+### Process Priorities
 
 ```bash
 nice -n 19 ionice -c3 rm -rf /dir
 ```
 
-## Timestamps
+### Timestamps
 
 ```bash
 date '+%Y-%m-%d'
