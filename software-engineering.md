@@ -19,14 +19,17 @@
   - [Code Smells](https://refactoring.guru/refactoring/smells)
   - [Refactoring Techniques](https://refactoring.guru/refactoring/techniques)
 
-## Pattern
+## Patterns
 
 - [Catalog of Design Patterns](https://refactoring.guru/design-patterns/catalog)
   - [Creational Design Patterns](https://refactoring.guru/design-patterns/creational-patterns)
   - [Structural Design Patterns](https://refactoring.guru/design-patterns/structural-patterns)
   - [Behavioral Design Patterns](https://refactoring.guru/design-patterns/behavioral-patterns)
+- [Catalog of Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/index.html)
 - [Design Patterns Book](http://wiki.c2.com/?DesignPatternsBook)
 - [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
+- [Messaging Patterns Overview](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
+- [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
 
 ## Principles
 
