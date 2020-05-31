@@ -77,7 +77,7 @@ NAME     SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  A
 mypool  9,50G   696K  9,50G        -         -     0%     0%  1.00x    ONLINE  -
 ```
 
-## Kompresssion aktivieren
+## Kompression aktivieren
 
 Der Kompressionsgrad kann jederzeit geändert werden.
 Die Einstellung betrifft aber nur neue Daten.
