@@ -8,14 +8,34 @@ Bei überladenen Signalen ist ein `cast` notwendig. Folgender Code funktioniert 
 connect(this->lspServer, &QProcess::finished, [=](int) {});
 ```
 
-Die Lösung nutzt einen `static_cast`:
+Ein Cast ist notwendig um die korrekte Methode auszuwählen.
+Je nach C++-Version und Compiler gibt es mehrere Lösungen.
 
-```cpp
-exitCode){
-connect(this->lspServer, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [=](int exitCode){
-  // …
-});
-```
+- Die umständlichste Lösung verwendet einen `static_cast`.
+
+  ```cpp
+  connect(
+    this->lspServer,
+    static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
+    [=](int exitCode){ /* … */ }
+  );
+  ```
+
+- Mit `QOverload` gibt es einen schöneren Syntax,
+  der mindestens C++14 voraussetzt.
+  Die folgenden Beispiele lösen die Überladung von `QSpinBox::valueChanged` auf.
+
+  ```cpp
+  connect(spinBox, QOverload<int>(&QSpinBox::valueChanged),
+    [=](int i){ /* … */ });
+  ```
+
+  Je nach Tooling muss auf folgenden Syntax zurückgegriffen werden.
+
+  ```cpp
+  connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+    [=](int i){ /* … */ });
+  ```
 
 ## Eclipse + Finroc + Qt5
 
