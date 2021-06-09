@@ -1,5 +1,13 @@
 # Pulse Audio
 
+## Noise in the Audio Signal
+
+When "metallic noise" appears in the audio output, replace the running PulseAudio daemon with a new one.
+
+```bash
+pulseaudio --kill
+```
+
 ## Microphone records only Noise
 
 - Disable unused devices to narrow down the issue
