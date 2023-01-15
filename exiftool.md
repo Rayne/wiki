@@ -15,7 +15,7 @@ exiftool '-FileName<CreateDate'      -d '%Y-%m-%d %H-%M-%S%%-c.%%e' "$file"
 ```
 
 When a camera was configured with a wrong date, we need to modify the timestamp first.
-It would be also a good idea to update the timestamp, but the following snippets does not modify it.
+It would be also a good idea to update the timestamp, but the following snippet does not modify it.
 
 ```bash
 date="$(exiftool -tab -dateFormat '%Y-%m-%d %H:%M:%S' -Exif:CreateDate "$file" | cut -f 2)"
