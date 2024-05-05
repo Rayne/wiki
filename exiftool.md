@@ -5,6 +5,12 @@ time="2014:01:31 11:47:31"
 exiftool -m -XMPToolkit= -alldates="$time" -DateTimeDigitized="$time" -ModifyDate= file.jpg
 ```
 
+## Set Creation Time with _Ymd His_ Format
+
+```bash
+exiftool -DateTimeOriginal="2024:04:27 20:00:00"
+```
+
 ## Rename images with meta-data
 
 The following snippet is directly based on the manual.
@@ -32,7 +38,3 @@ fi
 
 mv "$file" "$date $file"
 ```
-
-**TODO**
-Time manipulation might be possible with `exiftool` directly.
-This has to be checked.
